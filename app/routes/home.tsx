@@ -1,17 +1,21 @@
 import Navbar from "components/Navbar";
 import type { Route } from "./+types/home";
+import Hero from "components/Hero";
+import Projects from "components/Projects";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
+    { title: "Roomify: Convert Design to Model" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center">
-     <Navbar/>
+    <div className="home">
+      <Navbar/>
+      <Hero/>
+      <Projects/>
     </div>
   );
 }
